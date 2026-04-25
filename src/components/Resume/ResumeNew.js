@@ -6,7 +6,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 // ✅ FIX 1: Add .pdf extension
-import pdf from "../../Assets/Resume_Mandar_Rajadhyaksha.pdf";
+const pdf = "/resume.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -41,7 +41,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", marginTop: "30px" }}>
           <a
             href={pdf}
-            download="Mandar_Rajadhyaksha_Resume.pdf"
+            download="Mandar_Rajadhyaksha_resume.pdf"
             className="btn btn-primary resume-btn"
           >
             <AiOutlineDownload />
